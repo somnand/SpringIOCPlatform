@@ -2,12 +2,21 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+   http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
+	<!-- This section scans for @Component in the given package -->
+	<context:component-scan base-package="code"/>
+	<!-- This section declares the bean, here in the XML directly(obsolete) -->
 	<bean id="car" class="code.Car" >
 		<property name="carName" value="Maruti-Alto"></property>
 	</bean>
-	<bean id="bike" class="code.Bike" />
+	
+	<bean id="bike" class="code.Bike" >
+		<constructor-arg value="Hero"/>
+	</bean>
 
 </beans>

@@ -13,7 +13,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
    </code>
  * 
  * @author Somsurya Nanda
- *
  */
 public class Main 
 {
@@ -26,8 +25,7 @@ public class Main
         car.drive();
         System.out.println("Car name : "+car.getCarName());
         Vehicle vehicle = (Vehicle)context.getBean("bike");
-        vehicle.drive();
-        
-        
+        vehicle.drive();    
+        System.out.println(vehicle);
     }
 }
