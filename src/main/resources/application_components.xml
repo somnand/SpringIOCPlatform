@@ -5,7 +5,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
-	<bean id="car" class="code.Car" />
+	<bean id="car" class="code.Car" >
+		<property name="carName" value="Maruti-Alto"></property>
+	</bean>
 	<bean id="bike" class="code.Bike" />
 
 </beans>

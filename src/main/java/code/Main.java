@@ -22,9 +22,12 @@ public class Main
     	ApplicationContext context = new ClassPathXmlApplicationContext("application_components.xml");
     	System.out.println("Using Spring IOC - Version 5.1.7");
     	
-        Vehicle vehicle = (Vehicle)context.getBean("car");
+        Car car = (Car)context.getBean("car");
+        car.drive();
+        System.out.println("Car name : "+car.getCarName());
+        Vehicle vehicle = (Vehicle)context.getBean("bike");
         vehicle.drive();
-        vehicle = (Vehicle)context.getBean("bike");
-        vehicle.drive();
+        
+        
     }
 }
