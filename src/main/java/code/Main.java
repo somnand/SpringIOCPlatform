@@ -1,16 +1,22 @@
 package code;
 
-/**
- * Hello world!
- *
- */
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages= {"code"})
 public class Main 
 {
+	BusinessWorker worker;
+	
     public static void main(String[] args )
     {
-        Vehicle vehicle = new Car();
-        vehicle.drive();
-        vehicle = new Bike();
-        vehicle.drive();
+       ApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
+       
+       BusinessWorker worker = context.getBean(BusinessWorker.class);
+       worker.work();       
     }
 }
