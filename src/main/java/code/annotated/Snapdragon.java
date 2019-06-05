@@ -1,5 +1,8 @@
 package code.annotated;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Snapdragon implements Processor
 {
 	public Snapdragon()

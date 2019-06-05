@@ -7,7 +7,7 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		ApplicationContext context = new AnnotationConfigApplicationContext(PhoneConfig.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(AutoPhoneConfig.class);
 		
 		MobilePhone samsungPhone = context.getBean(MobilePhone.class);
 		
