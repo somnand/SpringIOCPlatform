@@ -9,7 +9,7 @@ public class Main
 	{
 		ApplicationContext context = new AnnotationConfigApplicationContext(PhoneConfig.class);
 		
-		Samsung samsungPhone = context.getBean(Samsung.class);
+		MobilePhone samsungPhone = context.getBean(MobilePhone.class);
 		
 		samsungPhone.showConfig();
 	}

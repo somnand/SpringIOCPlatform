@@ -2,7 +2,7 @@ package code.annotated;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class Samsung
+public class MobilePhone
 {
 	@Autowired
 	Processor cpu;

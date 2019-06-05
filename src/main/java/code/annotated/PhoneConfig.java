@@ -9,15 +9,16 @@ public class PhoneConfig
 	@Bean
 	public Processor getProcessor()
 	{
-		Processor cpu = new Processor();
-		cpu.setCpuName("Intel");
+		Processor cpu = new Snapdragon();
+		//cpu.setCpuName("Snapdragon-650");
+		//cpu.setCpuName("Intel-M220");
 		return cpu;		
 	}
 	
 	@Bean
-	public Samsung getSamsung()
+	public MobilePhone getSamsung()
 	{
-		return new Samsung();
+		return new MobilePhone();
 	}
 
 }

@@ -1,22 +1,7 @@
 package code.annotated;
 
-public class Processor
+public interface Processor
 {
-	private String cpuName;
-
-	public String getCpuName()
-	{
-		return cpuName;
-	}
-
-	public void setCpuName(String cpuName)
-	{
-		this.cpuName = cpuName;
-	}
-
-	@Override
-	public String toString()
-	{
-		return "Processor [cpuName=" + cpuName + "]";
-	}	
+	public void setCpuName(String cpuName);
+	public String getCpuName();	
 }
