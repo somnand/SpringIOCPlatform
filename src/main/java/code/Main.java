@@ -7,16 +7,15 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages= {"code"})
-public class Main 
+@ComponentScan(basePackages = { "code" })
+public class Main
 {
-	BusinessWorker worker;
-	
-    public static void main(String[] args )
-    {
-       ApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
-       
-       BusinessWorker worker = context.getBean(BusinessWorker.class);
-       worker.work();       
-    }
+	public static void main(String[] args)
+	{
+		ApplicationContext context = new AnnotationConfigApplicationContext(Main.class);		
+		
+		BusinessWorker worker = context.getBean(BusinessWorker.class);
+		worker.work();
+		worker.talk();		
+	}
 }

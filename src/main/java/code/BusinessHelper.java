@@ -11,15 +11,15 @@ import org.springframework.stereotype.Component;
 @EnableAspectJAutoProxy
 public class BusinessHelper
 {
-	@Before("execution(public void work())")
+	@Before("execution(* work())")	
 	public void logBefore()
 	{
-		System.out.println("Logging before the business task");
+		System.out.println("Starting of business task output!!");
 	}
 	
-	@After("execution(public void work())")
+	@After("execution(* work())")
 	public void logAfter()
 	{
-		System.out.println("Logging after the business task");
+		System.out.println("End of the business task output!!");
 	}
 }
